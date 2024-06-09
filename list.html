@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      background-image: url("https://cdn.dribbble.com/users/2330950/screenshots/6128967/59_4x.jpg");
+      background-size: cover; /* This will cover the entire background */
+      background-repeat: no-repeat; /* This will prevent the image from repeating */
+      background-position: center; /* This will center the image */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* This will make sure the container is centered vertically */
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Added a semi-transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 1000px; /* Adjusted maximum width */
+      font-size: 20px;
+    }
+    
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add new task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+  <script>
+    function addTask() {
+      var input = document.getElementById("taskInput").value;
+      if (input === "") {
+        alert("Please enter a task.");
+        return;
+      }
+      var ul = document.getElementById("taskList");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(input));
+      ul.appendChild(li);
+      document.getElementById("taskInput").value = "";
+      var deleteBtn = document.createElement("button");
+      deleteBtn.appendChild(document.createTextNode("Delete"));
+      deleteBtn.setAttribute("class", "delete-btn");
+      deleteBtn.setAttribute("onclick", "deleteTask(this)");
+      li.appendChild(deleteBtn);
+    }
+
+    function deleteTask(btn) {
+      var li = btn.parentNode;
+      var ul = li.parentNode;
+      ul.removeChild(li);
+    }
+  </script>
+</body>
+</html>

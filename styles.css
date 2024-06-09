@@ -1,0 +1,84 @@
+/* Font */
+body {
+  align : center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: pink;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    margin: 0 auto; /* This will center the container horizontally */
+    margin-top: 60px; /* Added margin-top to center it vertically */
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: pink;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    color: darkmagenta;
+  }
+  
+  /* Input Field */
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color:greenyellow;
+  }
+  
+  /* Button */
+  button {
+    background-color:aquamarine;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color:aqua;
+  }
+  
+  /* List */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* List Item */
+  li {
+    margin-bottom: 20px;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #3498db;
+  }
+  
